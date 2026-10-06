@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #FAFAFC;
+    color: #0F172A;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Ambient Soft Light Grid with Rose Warmth */
+.bg-light-ambient-grid {
+  background-color: #FAFAFC;
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Magic UI Shimmer Animation */
+@keyframes shimmerText {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shiny-text {
+  background: linear-gradient(90deg, #E11D48 0%, #FB7185 50%, #BE123C 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 3.5s infinite;
+}
+
+/* Magic UI Border Beam Animation */
+@keyframes borderBeam {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* Superlist 3D Floating Oscillations */
+@keyframes floatSuperlist1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.2deg);
+  }
+}
+
+@keyframes floatSuperlist2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.2deg);
+  }
+}
+
+.animate-float-1 {
+  animation: floatSuperlist1 5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatSuperlist2 5.8s ease-in-out infinite;
+}
+
+/* 3D Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-x-8 {
+  transform: rotateX(8deg) rotateY(-4deg);
+}
+
+/* Superlist / Apple Tactile Clay Elevation Shadows */
+.shadow-clay {
+  box-shadow: 
+    0 1px 3px 0 rgba(0, 0, 0, 0.03),
+    0 8px 24px -4px rgba(225, 29, 72, 0.06),
+    0 16px 40px -8px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-clay-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadow-clay-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 2px 5px 0 rgba(0, 0, 0, 0.04),
+    0 14px 32px -4px rgba(225, 29, 72, 0.12),
+    0 24px 60px -8px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-rose-glow {
+  box-shadow: 0 0 35px -5px rgba(244, 63, 94, 0.35);
+}
+
+/* Superlist Tactile Button Press */
+.btn-tactile {
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 14px 0 rgba(225, 29, 72, 0.35);
+}
+
+.btn-tactile:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(225, 29, 72, 0.45);
+}
+
+.btn-tactile:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px 0 rgba(225, 29, 72, 0.3);
+}
+
+/* Attio Crisp Glass Card */
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Sleek Light Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
